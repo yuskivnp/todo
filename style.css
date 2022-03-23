@@ -1,0 +1,22 @@
+.is-done span {
+  text-decoration: line-through;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  width: 600px;
+  background-color: lime;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 5px;
+  
+}
+
+li:nth-child(even) {
+  background-color: red;
+}
