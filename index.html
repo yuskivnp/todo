@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="ua">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My todo application</title>
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
-  <h1>Hello</h1>
-
-  <div id="root">
-    <div>
-      <label>
-        Enter task:
-        <input type="text" id="task" onkeypress="keyPressed(event)"> 
-      </label>
-      <button type="button" onclick="saveTask()">Save</button>
-    </div>
-    <ul id="taskList">
-      <!-- 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task list</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root">
+      <h1>Hello<span id="user"></span></h1>
+      <h2>This is your task list ✧ •̀ ω •́ ✧</h2>
+      <div class="toggler">
+        <input type="checkbox" class="toggler-check" style="display: none" />
+        <span class="toggler-check"></span>
+      </div>
+      <div class="form">
+        <label for="task">Enter task:</label>
+        <input type="text" id="task" onkeypress="keyPressed(event)" />
+        <button type="button" onclick="saveTask()">Save</button>
+      </div>
+      <ul id="taskList">
+        <!-- 
         <li>
           <input type="checkbox">
           <span>Write application</span>
           <input type="button" value="Delete">
         </li> 
-      -->
-    </ul>
-  </div>
+      --></ul>
+    </div>
 
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
