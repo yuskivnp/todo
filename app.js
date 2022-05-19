@@ -72,7 +72,7 @@ function removeTask(event) {
   taskItem.classList.add('removing');
   setTimeout(() => {
     taskItem.remove();
-  }, 1000);
+  }, 990);
 }
 
 function handleDone(event) {
@@ -87,6 +87,10 @@ function createTaskItem(task) {
   const taskItem = document.createElement('li');
   taskItem.task = task;
   taskItem.classList.toggle('is-done', task.isDone);
+  taskItem.classList.add('adding');
+  setTimeout(() => {
+    taskItem.classList.remove('adding');
+  });
 
   const taskText = document.createElement('span');
   taskText.onclick = handleDone;
